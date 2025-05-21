@@ -1,5 +1,5 @@
 module.exports = {
-    inputs_1: {
+    inputs: {
         orderId: "G3Y2D9VN3L",
         userAddress1: "Kalidindi Towers",
         userAddress2: "Kalidindi Towers, Kiladi Vari St, Tuni, Andhra Pradesh 533401, India, Tuni",
@@ -60,7 +60,7 @@ module.exports = {
             invoiceDownloadUrl: "https://firebasestorage.googleapis.com/v0/b/flitzy-india-pvt-ltd.firebasestorage.app/o/daily_reports%2ForderInvoice1_G3Y2D9VN3L.pdf?alt=media",
         },
     },
-    inputs: {
+    inputs_1: {
         orderId: "SVYFUT5OX6",
         userAddress1: "Kalidindi Towers",
         userAddress2: "Kalidindi Towers, Kiladi Vari St, Tuni, Andhra Pradesh 533401, India, Tuni",
