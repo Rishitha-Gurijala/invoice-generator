@@ -296,10 +296,10 @@ async function createInvoice(inputs) {
     doc.end();
 
     setTimeout(async () => {
-        console.log("DownloadURL for Invoice PDF file :::");
+        console.log("Invoice PDF file created successfully !!!");
     }, 2000);
 
-    return "publicUrl";
+    return "Invoice PDF file created successfully !!!";
 }
 
 function insertProductsIntoTable(
