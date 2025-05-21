@@ -35,7 +35,7 @@ module.exports = {
       created_date: "2025-05-21T09:35:36.094Z",
     },
   },
-  inputs_1: {
+  inputs_modified: {
     orderId: "SVYFUT5OX6",
     userAddress1: "Kalidindi Towers",
     userAddress2:
