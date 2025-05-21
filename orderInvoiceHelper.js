@@ -16,7 +16,7 @@ const flitzyDetails = {
 };
 
 async function createInvoice(inputs) {
-  let pdfFileName = `orderInvoice1_${inputs.orderId}.pdf`;
+  let pdfFileName = `orderInvoice.pdf`;
   const doc = new PDFDocument();
   doc.pipe(fs.createWriteStream(pdfFileName));
   doc.y = 10;
