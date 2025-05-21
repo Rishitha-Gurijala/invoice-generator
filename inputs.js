@@ -1,12 +1,12 @@
 module.exports = {
   inputs: {
     orderId: "G3Y2D9VN3L",
-    userAddress1: "Kalidindi Towers",
+    userAddress1: "Flat No.XX, Floor XX, XXXXXXXXXX Apartments",
     userAddress2:
-      "Kalidindi Towers, Kiladi Vari St, Tuni, Andhra Pradesh 533401, India, Tuni",
-    userAddress3: "533401, Ph: 9398084775",
+      "MXXXXXXXXX Road, Landmark: XXXXXXXX",
+    userAddress3: "CITY XXXXXXXXX, STATE XXXXXXX, PIN: XXXXXX",
     orderDate: "21/05/2025",
-    deliveryPlace: "Tuni",
+    deliveryPlace: "xxxx",
     invoiceNumber: "ST5ZY-77459",
     invoiceDate: "21/05/2025",
     checkoutDoc: {
@@ -37,12 +37,12 @@ module.exports = {
   },
   inputs_modified: {
     orderId: "SVYFUT5OX6",
-    userAddress1: "Kalidindi Towers",
+    userAddress1: "Flat No.XX, Floor XX, XXXXXXXXXX Apartments",
     userAddress2:
-      "Kalidindi Towers, Kiladi Vari St, Tuni, Andhra Pradesh 533401, India, Tuni",
-    userAddress3: "533401, Ph: 9398084775",
+      "MXXXXXXXXX Road, Landmark: XXXXXXXX",
+    userAddress3: "CITY XXXXXXXXX, STATE XXXXXXX, PIN: XXXXXX",
     orderDate: "21/05/2025",
-    deliveryPlace: "Tuni",
+    deliveryPlace: "xxxx",
     invoiceNumber: "BM817-58891",
     invoiceDate: "21/05/2025",
     checkoutDoc: {

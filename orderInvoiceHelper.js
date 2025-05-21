@@ -1,18 +1,18 @@
 const PDFDocument = require("pdfkit");
 const fs = require("fs");
-const flitzyDetails = {
-  flitzyFullName: "Phyllflitzy India Private Limited",
+const companyDetails = {
+  flitzyFullName: "COMPANY XXXXXXXXX Pvt Ltd",
   flitzyLogoColor: "logo.jpg",
-  officeAddress1: "235, 2nd Floor",
-  officeAddress2: "13th cross road, 2nd stage",
-  officeAddress3: "Indira Nagar, Bengaluru - 560038",
-  sampleAddress1: "Flat-206, 3rd floor, Honey Dew Appartments",
-  sampleAddress2: "Mahatma Gandhi Rd. Ashirvad Colony. Hormavu",
-  sampleAddress3: "BENGALURU, KARNATAKA, 560043",
-  panNumber: "AAPCP4351H",
-  gstNumber: "29AAPCP4351H1Z0",
-  supplyPlace: "Bengaluru",
-  flitzyShortName: "PHYLLFLITZY PVT LTD.",
+  officeAddress1: "Floor No.XX / Plot No.XX",
+  officeAddress2: "XXXXXXXXXXXXX Locality",
+  officeAddress3: "CITY XXXXXXX, PIN: XXXXXX",
+  sampleAddress1: "Flat No.XX, Floor XX, XXXXXXXXXX Apartments",
+  sampleAddress2: "MXXXXXXXXX Road, Landmark: XXXXXXXX ",
+  sampleAddress3: "CITY XXXXXXXXX, STATE XXXXXXX, PIN: XXXXXX",
+  panNumber: "AAAAAAAAAA",
+  gstNumber: "YYYYYYYYYYYYYYYY",
+  supplyPlace: "city name",
+  flitzyShortName: "shortName XXXX",
 };
 
 async function createInvoice(inputs) {
@@ -21,7 +21,7 @@ async function createInvoice(inputs) {
   doc.pipe(fs.createWriteStream(pdfFileName));
   doc.y = 10;
   doc.x = 40;
-  doc.image(flitzyDetails.flitzyLogoColor, {
+  doc.image(companyDetails.flitzyLogoColor, {
     fit: [80, 80],
     align: "left",
     valign: "left",
@@ -34,19 +34,19 @@ async function createInvoice(inputs) {
   doc.font("Helvetica").fontSize(9).text("(Original for Recipient)", 407, 30);
 
   doc.font("Helvetica-Bold").fontSize(10).text("Sold By:", 40, 80);
-  doc.font("Helvetica").fontSize(10).text(flitzyDetails.flitzyFullName, 40, 95);
+  doc.font("Helvetica").fontSize(10).text(companyDetails.flitzyFullName, 40, 95);
   doc
     .font("Helvetica")
     .fontSize(10)
-    .text(flitzyDetails.officeAddress1, 40, 108);
+    .text(companyDetails.officeAddress1, 40, 108);
   doc
     .font("Helvetica")
     .fontSize(10)
-    .text(flitzyDetails.officeAddress2, 40, 121);
+    .text(companyDetails.officeAddress2, 40, 121);
   doc
     .font("Helvetica")
     .fontSize(10)
-    .text(flitzyDetails.officeAddress3, 40, 134);
+    .text(companyDetails.officeAddress3, 40, 134);
 
   doc.font("Helvetica-Bold").fontSize(10).text("Billing Address:", 40, 165);
   doc.font("Helvetica").fontSize(10).text(inputs.userAddress1, 40, 180);
@@ -54,15 +54,15 @@ async function createInvoice(inputs) {
   doc.font("Helvetica").fontSize(10).text(inputs.userAddress3, 40, 206);
 
   doc.font("Helvetica-Bold").fontSize(10).text(`PAN No: `, 40, 237);
-  doc.font("Helvetica").fontSize(10).text(flitzyDetails.panNumber, 85, 237);
+  doc.font("Helvetica").fontSize(10).text(companyDetails.panNumber, 85, 237);
   doc
     .font("Helvetica-Bold")
     .fontSize(10)
     .text(`GST Registration No: `, 40, 250);
-  doc.font("Helvetica").fontSize(10).text(flitzyDetails.gstNumber, 145, 250);
+  doc.font("Helvetica").fontSize(10).text(companyDetails.gstNumber, 145, 250);
 
   doc.font("Helvetica-Bold").fontSize(10).text(`Place of supply: `, 405, 157);
-  doc.font("Helvetica").fontSize(10).text(flitzyDetails.supplyPlace, 490, 157);
+  doc.font("Helvetica").fontSize(10).text(companyDetails.supplyPlace, 490, 157);
   doc.font("Helvetica-Bold").fontSize(10).text(`Place of Delivery: `, 400, 170);
   doc.font("Helvetica").fontSize(10).text(inputs.deliveryPlace, 490, 170);
 
@@ -454,7 +454,7 @@ function signatureTable(doc, initialHieght, mainlength) {
   doc
     .font("Helvetica-Bold")
     .fontSize(7)
-    .text(`For ${flitzyDetails.flitzyShortName}`, 445, initialHieght + 45);
+    .text(`For ${companyDetails.flitzyShortName}`, 445, initialHieght + 45);
   doc.image("invoiceSigns/director_1.png", {
     fit: [80, 80],
     align: "right",
