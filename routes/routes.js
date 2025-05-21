@@ -1,7 +1,7 @@
-const { getHealth } = require("../controller/health.js");
+const { createInvoiceFile } = require("../controller/health.js");
 
 function getRoutes() {
-  app.get("/api/health", getHealth);
+  app.get("/api/createInvoice", createInvoiceFile);
 }
 
 module.exports = {
