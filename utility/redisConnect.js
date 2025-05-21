@@ -1,16 +1,7 @@
 let { createClient } = require("redis");
-const dotenv = require("dotenv");
-dotenv.config();
 
 function establishRedis() {
-  global.client = createClient({
-    url: process.env.REDIS_URL,
-    pingInterval: 3000,
-    socket: {
-      tls: true,
-      rejectUnauthorized: false,
-    },
-  });
+  global.client = createClient({});
   client.on("error", (err) => console.log("Redis Client Error", err));
   client.on("ready", () => {
     console.log("Redis is ready Test 5");

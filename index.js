@@ -2,6 +2,7 @@ let express = require("express");
 global.app = express();
 const cors = require("cors");
 const { establishRedis } = require("./utility/redisConnect.js");
+const { getRoutes } = require("./routes/routes.js");
 
 let bodyParser = require("body-parser");
 app.use(bodyParser.json({ limit: "100mb" }));
@@ -15,7 +16,7 @@ establishRedis();
 
 const dotenv = require("dotenv");
 dotenv.config();
-const PORT = process.env.PORT;
+const PORT = 3000;
 
 getRoutes();
 
