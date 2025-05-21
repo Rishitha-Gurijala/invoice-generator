@@ -2,7 +2,7 @@ const PDFDocument = require("pdfkit");
 const fs = require("fs");
 const flitzyDetails = {
   flitzyFullName: "Phyllflitzy India Private Limited",
-  flitzyLogoColor: "Flitzy_logo_fullcolor.jpg",
+  flitzyLogoColor: "logo.jpg",
   officeAddress1: "235, 2nd Floor",
   officeAddress2: "13th cross road, 2nd stage",
   officeAddress3: "Indira Nagar, Bengaluru - 560038",
